@@ -29,9 +29,6 @@ fun main() {
 
     for (pessoa in 1..numeroDePessoas) {
 
-
-
-
         // Sex...
         println("How is the sex? Only M or F")
         val sex = readLine()!!.toString()
@@ -45,9 +42,10 @@ fun main() {
         // Wage...
         println("How is the wage?")
         val salario = readLine()!!.toDouble()
-        if (salario > 0){
+        if (salario > 0) {
             numeroDeSalarios++
         }
+        somaSalario = somaSalario + salario
 
 
         // Age...
@@ -67,11 +65,9 @@ fun main() {
         } else if (idade > maiorIdade){
             maiorIdade = idade
         }
-
-
     }
 
-
+    val mediaSalario = somaSalario / numeroDePessoas
 
      // Exit...
     finishComand()
@@ -82,13 +78,9 @@ fun main() {
     println("A Menor idade é: ${menorIdade}")
     println("A Maior idade é: ${maiorIdade}")
     finishComand()
-
-
-
-
-
+    println("A Média de salários é: ${mediaSalario}")
+    finishComand()
 }
-
 
 // if (sexo !== "M" || sexo !== "F"){
 //println("Error, please only M or F")}
